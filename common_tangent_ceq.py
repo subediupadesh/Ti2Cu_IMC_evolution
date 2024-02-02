@@ -53,7 +53,7 @@ def Parabola(A0, B0, C0, x01, x02, A1, B1, C1, x11, x12, x_coords, y_coords, col
     p.title.text_font_size = "30pt"
     p.add_layout(p.title, 'above', )
     p.grid.grid_line_color = 'black'
-    p.add_layout(Title(text="For Parabola of form: A(x-xi)^2 + B(x-xi) + C",  text_font_size="20pt",  text_font_style="italic"), 'above')
+    p.add_layout(Title(text="For Parabola of form: A(x-xi)^2 + B(x-xj) + C",  text_font_size="20pt",  text_font_style="italic"), 'above')
 
 
     p.xaxis.axis_label_text_font_size = '24pt'
