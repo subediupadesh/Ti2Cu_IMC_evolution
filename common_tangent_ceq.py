@@ -229,6 +229,8 @@ with st.expander('Mathematical Explanation'):
 cm1, cm2 = st.columns([0.2,0.8])
 
 def gaussian_3d(A, C, x, y, power, absorptance, beam_radius):
+    beam_radius = beam_radius*1.0e-6 ## converting to micrometer
+    absorptance = absorptance*1.0e7  # converting to 1.0e7 /m
 
     r = (x**2 + y**2)**0.5
     F = np.where(beam_radius - r < 0, 0, 1)
@@ -259,16 +261,15 @@ cm2.title(r'''$$Q =  \frac{AP\alpha}{\pi r_o^2} \exp(\frac{-Cr^2}{r_0^2})   $$''
 
 cm1.header('Parameters')
 power = cm1.slider(r'''Power $$(P)$$''', min_value=1, max_value=5000, value=1000, step=1)
-absorptance = cm1.slider(r'''Absorptance $$(\alpha)$$''', min_value=1.0e7, max_value=1.0e9, value=8.5e7, step=1.0e7)
-beam_radius = cm1.slider(r'''Beam Radius $$(r_0)$$''', min_value=100.0e-6, max_value=500.0e-6, value=222.5e-6, step=0.000001)
-
-# st.divider()
-
+absorptance = cm1.slider(r'''Absorptance $$(\alpha)$$ $$[\times 10^7 /m]$$''', min_value=1.0, max_value=1.0e2, value=8.5, step=1.0)
+beam_radius = cm1.slider(r'''Beam Radius $$(r_0$$ $$\mu m)$$''', min_value=100.0, max_value=500.0, value=222.5, step=0.01)
 A = cm1.slider(r'''Constant $$(A)$$''', min_value=0.00001, max_value=5.0, value=2.0, step=0.0001)
 C = cm1.slider(r'''Constant $$(C)$$''', min_value=0.0000001, max_value=4.0, value=2.0, step=0.0001)
 i = cm1.slider('colormap', min_value=0, max_value=9, value=6, step=1)
 
 fig = plot_gaussian_heat_distribution(A, C, power, absorptance, beam_radius, i)
+
+
 
 # Show the plot
 cm2.plotly_chart(fig, use_container_width=True)
