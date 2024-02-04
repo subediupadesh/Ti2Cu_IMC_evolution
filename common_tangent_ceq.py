@@ -178,12 +178,12 @@ cm1.write("EQUILIBRIUM POINTS:")
 points = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
 c1, c2, c3, c4, c5, c6,  = cm1.columns(6)
 for i in range(len(x_coords)):
-    if i<2: c1.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
-    elif i<4 : c2.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
-    elif i<6 : c3.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
-    elif i<8 : c4.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
-    elif i<10 : c5.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
-    elif i<12 : c6.write(f'{points[i]}: ({x_coords[i]:.2f}, {y_coords[i]:.2f})')
+    if i<2: c1.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
+    elif i<4 : c2.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
+    elif i<6 : c3.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
+    elif i<8 : c4.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
+    elif i<10 : c5.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
+    elif i<12 : c6.write(f'{points[i]}: ({x_coords[i]:.3f}, {y_coords[i]:.3f})')
 
 
 ####### Mathematical Explanation 
