@@ -1,4 +1,4 @@
-# Phase Field Method for Description of Ti2Cu (IMC) evolution in Ti-rich HCP Matrix
+# Phase Field Method for Describing the Morphological Evolution of  Ti2Cu (IMC) Precipitates in Ti-rich HCP Matrix
 The initial nucleation geometries  of the IMC precipitates dictate the final morphologies.
 So, the current codes are categorized basically into the following two types:
 
